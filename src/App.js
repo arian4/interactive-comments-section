@@ -1,23 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
+
+import { useContext } from 'react';
+import AddComment from './components/AddComment';
+import Comment from './components/Comment';
+import { AppContext } from './context/AppContext';
 
 function App() {
+  const {comments} = useContext(AppContext)
+  
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    
+    <div className="min-h-screen  p-4 bg-very_light_gray lg:p-20  lg:flex  lg:items-center lg:justify-center">
+      <div className='lg:w-[700px]'>
+        {
+          comments.map(comment => {
+            return(
+              <Comment comment={comment} />
+            )
+          })
+        }
+        <AddComment />
+
+      </div>
+      
+       
+        
     </div>
   );
 }
