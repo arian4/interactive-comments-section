@@ -13,7 +13,7 @@ users should be able to:
 - Create, Read, Update, and Delete comments and replies
 - Upvote and downvote comments
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Online deployment link : [Interactive comments section](https://arian4.github.io/interactive-comments-section/).
 
 ## Available Scripts
 
